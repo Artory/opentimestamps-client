@@ -1,0 +1,4 @@
+--ignore-dir=*.egg-info
+--ignore-dir=dist
+--ignore-dir=build
+--ignore-dir=.tox

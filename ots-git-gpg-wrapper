@@ -10,8 +10,14 @@
 # modified, propagated, or distributed except according to the terms contained
 # in the LICENSE file.
 
+import os.path
 import sys
-sys.path.insert(1, sys.path[0] + '/python-opentimestamps/')
+
+# TODO: Replace this script with setup.py console_scripts to get rid of the sys.path juggling.
+ROOT_DIR = os.path.dirname(__file__)
+ROOT_DIR_FROM_SCRIPTS = os.path.dirname(os.path.dirname(ROOT_DIR))
+sys.path.insert(1, os.path.join(ROOT_DIR, 'python-opentimestamps', ''))
+sys.path.insert(1, os.path.join(ROOT_DIR_FROM_SCRIPTS, 'python-opentimestamps', ''))
 
 import argparse
 import base64

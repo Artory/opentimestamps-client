@@ -10,3 +10,10 @@
 # in the LICENSE file.
 
 __version__ = "0.4.0-PENDING"
+
+import os.path
+import sys
+
+ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
+sys.path.insert(1, os.path.join(ROOT_DIR, ''))
+sys.path.insert(1, os.path.join(ROOT_DIR, 'python-opentimestamps', ''))

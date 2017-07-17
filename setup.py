@@ -27,7 +27,7 @@ setup(
         'pysha3>=1.0.2',
     ],
 
-    zip_safe=True,
+    zip_safe=False,
 
     scripts={
         'ots-git-gpg-wrapper',

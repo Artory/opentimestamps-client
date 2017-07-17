@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 
 def find_packages_in_dir(path):
-    return [path + x for x in find_packages(path)]
+    return ['.'.join([path, x]) for x in find_packages(path)]
 
 
 setup(
@@ -18,7 +18,7 @@ setup(
     version='0.4.0',
     url='https://github.com/opentimestamps/opentimestamps-client',
 
-    packages=find_packages() + find_packages_in_dir('python-opentimestamp'),
+    packages=find_packages() + find_packages_in_dir('python-opentimestamps'),
 
     install_requires=[
         'python-bitcoinlib>=0.7.0',

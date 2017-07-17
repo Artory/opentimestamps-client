@@ -16,7 +16,7 @@ def find_packages_in_dir(path):
 setup(
     name='opentimestamps-client',
     version='0.4.0',
-    url='https://github.com/opentimestamps/opentimestamps-client',
+    url='https://github.com/Artory/opentimestamps-client',
 
     packages=find_packages() + find_packages_in_dir('python-opentimestamps'),
 
